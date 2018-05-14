@@ -1,6 +1,6 @@
 node {
    stage('Preparation') {
-      git clone git@github.com:GitHub4Adi/hellomaven.git
+      checkout scm
    }
    stage('Build') {
       mvn compile
