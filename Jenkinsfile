@@ -3,12 +3,12 @@ node {
       checkout scm
    }
    stage('Build') {
-      mvn compile
+      sh 'mvn compile'
    }
    stage('Unit tests') {
-      mvn test
+      sh 'mvn test'
    }
    stage('Package') {
-      mvn package
+      sh 'mvn package'
    }
 }
